@@ -1,17 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
 import defaultUser from '../../../assets/user.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProviders";
 
 const Navbar = () => {
+
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch()
+  }
+
   const navLinks = (
     <>
       <li>
-        <NavLink to="/" className="md:font-semibold">Home</NavLink>
+        <NavLink to="/" className="md:text-lg md:font-semibold">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/about" className="md:font-semibold">About</NavLink>
+        <NavLink to="/about" className="md:text-lg md:font-semibold">About</NavLink>
       </li>
       <li>
-        <NavLink to="/career" className="md:font-semibold">Career</NavLink>
+        <NavLink to="/career" className="md:text-lg md:font-semibold">Career</NavLink>
       </li>
     </>
   );
@@ -53,9 +64,14 @@ const Navbar = () => {
               <img src={defaultUser} />
             </div>
           </label>
+          {
+            user ? 
+              <button onClick={handleLogOut} className="md:py-2 md:px-8 bg-gray-700 text-white font-semibold rounded">Logout</button>
+            :
             <Link to="/login">
-            <button className="md:py-2 md:px-8 bg-gray-800 text-white font-semibold rounded">Login</button>
-          </Link>
+              <button className="md:py-2 md:px-8 bg-gray-700 text-white font-semibold rounded">Login</button>
+            </Link>
+          }
         </div>
       </div>
     </div>
