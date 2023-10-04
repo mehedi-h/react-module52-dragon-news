@@ -5,13 +5,13 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className="md:font-semibold">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about" className="md:font-semibold">About</NavLink>
       </li>
       <li>
-        <NavLink to="/career">Career</NavLink>
+        <NavLink to="/career" className="md:font-semibold">Career</NavLink>
       </li>
     </>
   );
@@ -45,16 +45,16 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 space-x-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end space-x-2">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               <img src={defaultUser} />
             </div>
           </label>
-          <Link to="/login">
-            <button className="btn btn-accent">Login</button>
+            <Link to="/login">
+            <button className="md:py-2 md:px-8 bg-gray-800 text-white font-semibold rounded">Login</button>
           </Link>
         </div>
       </div>
