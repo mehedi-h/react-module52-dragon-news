@@ -49,7 +49,8 @@ const Login = () => {
             <button className="btn btn-primary">Login</button>
           </div>
           <p className="text-center text-base md:text-lg font-medium">
-            Do not have an account? Please <Link to="/register" className="text-red-500 underline">Register</Link>
+            Do not have an account? Please 
+            <Link to="/register" className="text-red-500 md:pl-2 underline">Register</Link>
           </p>
         </form>
       </div>
