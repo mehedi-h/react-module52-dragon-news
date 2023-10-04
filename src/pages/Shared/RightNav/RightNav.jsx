@@ -9,15 +9,15 @@ const RightNav = () => {
     <div>
 
       {/* Login With */}
-      <div className='p-4 space-y-3 mb-6'>
-        <h2 className="text-2xl font-bold">Login With</h2>
+      <div className='px-4 pb-4 space-y-3 mb-6'>
+        <h2 className="md:text-xl md:font-bold">Login With</h2>
         <button className="btn btn-outline w-full"><FaGoogle></FaGoogle>Login With Google</button>
         <button className="btn btn-outline w-full"><FaGithub></FaGithub>Login With Github</button>
       </div>
 
       {/* Find Us On */}
       <div className='p-4 mb-6'>
-        <h2 className="text-2xl font-bold mb-5">Find Us On</h2>
+        <h2 className="md:text-xl md:font-semibold mb-5">Find Us On</h2>
             <a className='flex items-center p-4 border-2 rounded-tl-md rounded-tr-md' href=""><FaFacebook className='mr-3'></FaFacebook>Facebook</a>
             <a className='flex items-center p-4 border-x-2' href=""><FaTwitter className='mr-3'></FaTwitter>Twitter</a>
             <a className='flex items-center p-4 border-2 rounded-bl-md rounded-br-md' href=""><FaInstagram className='mr-3'></FaInstagram>Instagram</a>
@@ -25,7 +25,7 @@ const RightNav = () => {
 
       {/* Q-Zone */}
       <div className='p-4 mb-6'>
-        <h2 className="text-2xl font-bold mb-5">Q-Zone</h2>
+        <h2 className="md:text-xl md:font-semibold mb-5">Q-Zone</h2>
             <div className='space-y-5'>
               <img src={qZone1} alt="" />
               <img src={qZone2} alt="" />
