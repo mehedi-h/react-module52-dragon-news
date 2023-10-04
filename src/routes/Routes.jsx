@@ -3,6 +3,7 @@ import Root from "../Layout/Root";
 import Home from "../pages/Shared/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import NewsDetails from "../pages/NewsDetails/NewsDetails";
 
 
 
@@ -30,6 +31,10 @@ const routes = createBrowserRouter([
         {
             path: "/register",
             element: <Register></Register>
+        },
+        {
+            path: "/news/:id",
+            element: <NewsDetails></NewsDetails>
         }
     ]
   }  
