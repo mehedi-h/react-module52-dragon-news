@@ -15,7 +15,7 @@ const LeftNav = () => {
 
     return (
         <div>
-            <h2 className="md:py-3 md:text-xl md:font-semibold">All Categories</h2>
+            <h2 className="md:pb-3 md:text-xl md:font-semibold">All Categories</h2>
             {
                 categories.map(category => 
                     <Link

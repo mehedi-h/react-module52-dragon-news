@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import LeftNav from "../LeftNav/LeftNav";
 import Navbar from "../Navbar/Navbar";
@@ -6,6 +7,15 @@ import BreakingNews from "./BreakingNews/BreakingNews";
 
 
 const Home = () => {
+
+    const [allNews, setAllNews] = useState([])
+
+    useEffect(() => {
+    fetch('news.json')
+    .then(res => res.json())
+    .then(data => setAllNews(data))
+    },[])
+
     return (
         <div>
             <Header></Header>
@@ -16,9 +26,14 @@ const Home = () => {
                 <div>
                     <LeftNav></LeftNav>
                 </div>
+
                 <div className="md:col-span-2">
-                    <h2 className="text-4xl">News Comming Soon!</h2>
+                    <h2 className="md:text-xl md:font-semibold">Dragon News Home</h2>
+                    {
+                        allNews.map(news => console.log(news))
+                    }
                 </div>
+
                 <div>
                     <RightNav></RightNav>
                 </div>
